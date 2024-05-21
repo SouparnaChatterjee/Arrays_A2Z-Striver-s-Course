@@ -1,0 +1,14 @@
+int removeDuplicates(vector<int> &arr, int n) {
+	// Write your code here.
+	int i=0;
+	for(int j=0;j<n;j++)
+	{
+          if (arr[j] != arr[j - 1]) {
+            i++;
+            // storing the value of j in incremented i if a[j] and a[j+1] are
+            // unequal and we check again for the next element
+            arr[i] = arr[j];
+          }
+        }
+                return i;
+}
